@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #eeeeee;
+      }
+    </style>
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+    <div class="canvas-bk">
+        <script class="canvas">
+            var bubbles = [];
+
+            function setup() {
+            createCanvas(1000, 1000);
+
+            for (var i = 1; i < 25; i++) {
+                bubbles.push({
+                    x: random(width),
+                    y: random(height),
+                    radius: random(50, 60, 70, 80, 90, 100)
+                });
+            }
+            }
+
+            function draw() {
+            background(233, 254, 216);
+
+            for (var i = 0; i < bubbles.length; i++) {
+                var bubble = bubbles[i];
+            
+                if (dist(mouseX, mouseY, bubble.x, bubble.y) < bubble.radius) {
+                    if (mouseIsPressed) {
+                        bubbles.splice(i, 1); // remove this bubble!
+                    }
+                    fill(10, 135, 84, 200);
+                } else {
+                    fill(239, 255, 250, 215);
+                }
+
+                ellipse(bubble.x, bubble.y, bubble.radius*2);
+                bubble.x += random(-1,1);
+                bubble.y += random(-1,1);
+            }
+            }
+        </script>
+    </div>
+  </body>
+</html>
