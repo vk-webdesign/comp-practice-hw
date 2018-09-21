@@ -1,0 +1,112 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Painting a Landscape</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+</head>
+<body>
+    <script>
+        function setup() {
+            createCanvas(400, 400);
+            background(250, 248, 240);
+            frameRate(2000);
+            }
+
+            var e1x = 20;
+            var e2x = 20;
+            var e3x = 20;
+
+            var e1y = 120;
+            var e2y = 200;
+            var e3y = 280;
+
+            var animxe1 = 5;
+            var animxe2 = 8;
+            var animxe3 = 6;
+
+
+            var animye1 = 20;
+            var animye2 = 1;
+            var animye3 = 0.5;
+
+        function draw() {
+        //background(255, 255, 253);
+
+        //ellipse 1
+        noStroke();
+        fill(10, 140, 250, 8);
+        ellipse(e1x, e1y, 25)
+
+        e1x = e1x + animxe1;
+        e1y = e1y + animye1;
+
+        if (e1x < 20) {
+            animxe1 = +5;
+        }
+
+        if (e1x > 380) {
+            animxe1 = -5;
+        }
+
+        if (e1y < 20) {
+            animye1 = +20;
+        }
+
+        if (e1y > 120) {
+            animye1 = -20;
+        }
+
+        //ellipse 2
+        fill(10, 140, 150, 10);
+        ellipse(e2x, e2y, 25)
+
+        e2x = e2x + animxe2;
+        e2y = e2y + animye2;
+
+        if (e2x < 20) {
+            animxe2 = +8;
+        }
+
+        if (e2x > 380) {
+            animxe2 = -8;
+        }
+
+        if (e2y < 150) {
+            animye2 = +1;
+        }
+
+        if (e2y > 280) {
+            animye2 = -1;
+        }
+
+        //ellipse 3
+        fill(230, 210, 20, 10);
+        ellipse(e3x, e3y, 25)
+
+        e3x = e3x + animxe3;
+        e3y = e3y + animye3;
+
+        if (e3x < 20) {
+            animxe3 = +6;
+        }
+
+        if (e3x > 380) {
+            animxe3 = -6;
+        }
+        
+        if (e3y < 280) {
+            animye3 = +0.05;
+        }
+
+        if (e3y > 380) {
+            animye3 = -0.05;
+        }
+
+}
+    </script>
+</body>
+</html>
