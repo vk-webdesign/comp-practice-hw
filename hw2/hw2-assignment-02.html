@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #eeeeee;
+      }
+    </style>
+    <meta charset="utf-8" />
+
+  </head>
+  <body>
+
+<script>
+    function setup() {
+    createCanvas(400, 400);
+    }
+
+        var xc1 = 10;
+        var yc1 = 200;
+        var xc2 = 390
+        var yc2 = 300;
+        var changeInX = 3;
+        var changeInY = 0;
+        var changeInX2= 0;
+
+    function draw() {
+    background(220);
+    
+    ellipse(xc1, yc1, 40);
+    
+    ellipse(xc2, yc2-100, 40);
+    
+    xc1 = xc1 + changeInX;
+    yc1 = yc1 + changeInY;
+    
+    if (xc1 > width) {
+        changeInX = -3*6;
+        changeInY = -3;
+        yc1 = yc1 + changeInY;
+        changeInX2 = -1
+        xc2 = xc2 - changeInX2;
+    }
+    
+    if (xc1 < 0) {
+        changeInX = 3;
+        changeInY = 3*6;
+    }
+    
+    if (yc1 > height) {
+        changeInY = -3;
+        changeInX = xc1 + 2;
+    }
+    
+    if (yc1 < 0) {
+        changeInY = +3*10;
+        changeInX = xc1 + 3;
+    }
+    
+    yc2 = yc2 + changeInY;
+    xc2 = xc2 + changeInX2;
+    
+    if (yc2 > height) {
+        changeInY= -1;
+    }
+
+        if (xc2 < 0) {
+        xc2 = changeInX2 + 1;
+    }
+    }
+  </script>
+
+  </body>
+  </html>

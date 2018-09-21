@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+
+    <style>
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+      <meta charset="utf-8" />
+  
+    </head>
+
+    <body>
+        <script> // This isn't Mondrain but I wanted to share this cool drawing I made while watching the videos!
+          var circleX = 50;
+          var circleY = 300;
+          var blu = 10;
+          var grn = 10;
+          var move = 1;
+          var updwn = 1;
+
+        function setup() {
+          createCanvas(530, 600);
+          background(55,50,50);
+        }
+
+        function draw() {
+          //border
+          strokeWeight(39);
+          stroke(25);
+          fill(0,0,0,0)
+          rect(0,0,530,600);
+          
+          //elipse 1
+          (noStroke())
+          fill(100,grn,blu);
+          ellipse(circleX,circleY,60,60);
+          
+          //square
+          noStroke();
+          rect(242, 270, 60, 60);
+          
+          circleX = circleX+move;
+          circleY = circleY+updwn;
+          blu = circleX;
+          
+          if(circleX >= 255) {
+            grn = circleX-255;
+          }
+          if(circleX >= 480) {
+            move = -1;
+          }
+          if(circleX <= 60) {
+            move = 1; 
+          }
+          if(circleY >=550) {
+            updwn = -1;
+          }
+          if(circleY <=50) {
+            updwn = +1;
+          }
+          
+        }
+
+        function mousePressed() {
+          background(55,50,50);
+        }
+        </script>
+    </body>
