@@ -1,3 +1,5 @@
+// I also worked with you to modify the dot pattern. There was a middle square where the dots filled with random color, and the outer dots were in greyscale. The editor autosaved another one of your templates over the code I had written. I will try to upload this as in-class-animation-2.js when I have time to get to this again.
+
 var x = 210;
 var y = 290;
 
