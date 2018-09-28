@@ -71,3 +71,13 @@ To refer to a specific number in this array:
 > x[1] = 1 in the array
 > x[2] = 5 in the array
 > x[3] = 10 in the array
+
+
+#### What's the point of an object?
+An object is a grouping of nested variables. This can be used to simplify variable names that represent similar things for different elements.
+
+#### What's an example of a range you might use for the map function?
+One might use the positioning of an animated element to trigger the positioning of a second element.
+
+#### What line of code would give me a random year in the last century?
+var year = random(1918, 2018);
