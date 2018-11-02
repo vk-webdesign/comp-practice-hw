@@ -126,7 +126,7 @@ function draw() {
 
 
   //TEXT BOX
-  fill(16,60,74,250);
+  fill(12,57,70,245);
   noStroke();
   rect(0+50, height/6*3, width-100, height/12);
 
