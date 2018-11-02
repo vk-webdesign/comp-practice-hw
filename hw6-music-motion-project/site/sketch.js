@@ -100,6 +100,10 @@ function draw() {
     var y = map(volGraph[i], 0, 1, height/5*4+20, height/5*4-100);
   }
 
+  if (volGraph.length > width/9*3) {
+    volGraph.splice(0, 1);
+  }
+
   // LINE VIS
   stroke(185,201,217,30);
   strokeWeight(1);
