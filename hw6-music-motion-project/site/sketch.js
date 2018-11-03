@@ -36,19 +36,21 @@ function setup() {
   song.play();
   song.loop();
 
-  //Background Layout
+  //Advice Activate
+  function gotData(data) {
+      print(data.slip.advice);
+    textAdvice = data;
+  }
+
+  //Background Dash Layout
   for (x = 0; x < width / x_spacing ; x++){
     for (y = 0; y < height / y_spacing ; y++){
       points.push(createVector(x * x_spacing, y * y_spacing));
-    }
+  }
 }
 }
 
-  //Advice Activate
-  function gotData(data) {
-    print(data.slip.advice);
-    textAdvice = data;
-  }
+
 
 
   //Responsive Window
@@ -67,16 +69,18 @@ function setup() {
   var x = 10;
 
 function draw() {
-  background(17,79,84);  
+  background(20,79,86);  
 
   points.forEach(function(point){
     drawVectorFromPoint(point);
   })
 
+////COLORS
   //greenBkg = 17, 79, 84;
   //greenDrk = 171,237,198;
   //greenLit = 185,255,183;
   //txtBox = 16,60,74,250;
+  //dashes = 130,120,162);
 
   //MAIN GREEN RECTANGLE
   noStroke();
@@ -173,7 +177,7 @@ function draw() {
     var lineVector = p5.Vector.sub(mouse, anchorLocation);
     lineVector.setMag(lines_length);
 
-    stroke(130,120,162);
+    stroke(110,130,142);
     line(anchorLocation.x,
         anchorLocation.y,
         anchorLocation.x + lineVector.x,
