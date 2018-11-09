@@ -38,16 +38,40 @@
             display: block;
         }
 
-        div {
-            position: absolute;
-        }
         div.left {
+            position: absolute;
             width: 400px;
         }
         div.right {
-            left: 400px;
+            position: absolute;
+            left: 401px;
         }
 
+        .my-fancy-class {
+            width: 700px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 42;
+            font-weight: 700;
+            line-height: 60px;
+            text-transform: uppercase;
+            color:rgb(11, 97, 194);
+            background:#eeeeee;
+            border: 12px;
+            border-radius: 3px;
+            border-color: darkslategray;
+            transition: all 0.5s;
+        }
+
+        .my-fancy-class:hover {
+            letter-spacing: 8px;
+            width: 900px;
+            transition: all 1s;
+        }
+
+
+        #container {
+            display: flex;
+        }
      </style>
 <body>
   Hi.
@@ -77,5 +101,15 @@
 
 <div id="left">I'm the left Div</div>
 <div id="right">I'm the right Div</div>
+
+<p class="my-fancy-class">
+    Take a step into the abyss. This road will take you farther than you can ever imagine. Don't worry, it only hurts a little. If you can feel it, it's a good thing. Embrace it, fight it, but don't love it. No matter what you do, keep putting one foot forward. There's no going back, There never will be<br> — keep calm.
+</p>
+
+<div id="container">
+    <h1>Title of a really cool thing!</h1>
+    <img src="https://i.imgflip.com/zfzg2.jpg"/>
+    <p>Well… maybe it's not actually a cool thing</p>
+</div>
 </body>
 </html>

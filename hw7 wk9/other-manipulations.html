@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+    <script>
+        function moveButton() {
+                $('button').css({ left: 100*Math.random(), top: 100*Math.random() });
+            }
+            function setup() {
+                $('button').on('mouseover', moveButton);
+            }
+            $(setup);
+    </script>
+
+    <style>
+        button {
+            margin-left: 50vw;
+            margin-top: 50vh;
+        }
+    </style>
+
+    <body>
+        <button>Click Me! 
+            <script>
+            function moveButton() {
+                $('button').css({ left: 100*Math.random(), top: 100*Math.random() });
+            }
+            function setup() {
+                $('button').on('mouseover', moveButton);
+            }
+            $(setup);
+            </script>
+        </button>
+    </body>
+</html>

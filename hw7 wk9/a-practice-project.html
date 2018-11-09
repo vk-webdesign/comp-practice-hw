@@ -1,0 +1,132 @@
+<html>
+<head>
+    <title>Practice Practice Practice!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<style>
+    .comments {
+        position:fixed;
+        margin-left: 66.66666%;
+        margin-right: auto;
+        bottom: 0;
+        width: 25rem;
+    }
+    .comment {
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 16px;
+        line-height: 23px;
+        margin-top: -10px;
+        padding-bottom: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 8px;
+        border: 10px;
+        border-bottom-color: black;
+        border-style: solid;
+    }
+    .author {
+        font-weight: 700;
+    }
+    .date {
+        font-weight: 700;
+        color: #444;
+        float: right;
+    }
+    p {
+        font-weight: 600;
+        margin: 10px;
+        padding: 0;
+    }
+
+    .avatar {
+        width: 15px;
+        margin-top:1px;
+        height: 16px;
+        margin-right: 4px;
+    }
+
+    .purple-box {
+        margin-left: 24.999999%;
+        margin-top: 200;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 120px;
+        font-weight: 700;
+    }
+
+    .purple {
+        color: purple;
+    }
+
+    #form {
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        margin-left: 25.8888%;
+    }
+</style>
+
+<script>
+    function setup() {
+    $('.purpleable').on('focus', togglePurpleClass);
+    }
+
+    $(setup);
+    
+    function togglePurpleClass() {
+        $('.purplable').toggleClass('purple');
+        setTimeout(togglePurpleClass, 2000);
+    }
+
+    setTimeout(togglePurpleClass, 2000);
+
+    
+
+</script>
+<body>
+    <div class="comments">
+        <div class="comment">
+          <img class="avatar" src="https://cdn.shopify.com/s/files/1/0802/5135/products/FS-black-trivet-stone-triangle-07_copy.jpg?v=1459710604"><span class="author">zamfi</span><span class="date">11:15am • Thu, June 15, 2016</span>
+          <p>This is the lamest exercise I've ever encountered. Can't we do something cool like animations with keyframes?</p>
+        </div>
+      
+        <div class="comment">
+            <img class="avatar" src="https://orig00.deviantart.net/2f95/f/2011/218/2/7/black_circle_resize_by_10binary-d45occy.gif"><span class="author">bhaynes</span><span class="date">11:35am • Thu, June 15, 2016</span>
+          <p>At least it's practical, I guess?</p>
+        </div>
+      
+        <div class="comment">
+            <img class="avatar" src="https://cdn.shopify.com/s/files/1/0802/5135/products/FS-black-trivet-stone-triangle-07_copy.jpg?v=1459710604"><span class="author">zamfi</span><span class="date">11:36am • Thu, June 15, 2016</span>
+          <p>Psh, whatevs.</p>
+          <p>I want to learn JavaScript.</p>
+        </div>
+
+        <div class="comment">
+            <img class="avatar" src="https://d7rh5s3nxmpy4.cloudfront.net/CMP1285/Heritage-Black-Trapezoid.jpg"><span class="author">vkeeffe</span><span class="date">10:28am • Fri, June 16, 2016</span>
+            <p>But JavaScript is hard.</p>
+            <p>Why would you want to do anything hard?</p>
+            <p>jk…</p>
+        </div>
+      </div>
+      <div class="purple-box">
+          <p class="purplable">Purple, YO!</p>
+      </div>
+
+      <form id="form">
+        <p>Log-in.</p>
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <script>    
+            var form = document.getElementById("form");
+
+                form.addEventListener("focus", function( event ) {
+                event.target.style.background = "purple";    
+                }, true);
+        
+                form.addEventListener("blur", function( event ) {
+                event.target.style.background = "";    
+                }, true);
+        </script>
+        <br><input type="submit" value="Submit">
+      </form>
+</body>
+</html>
